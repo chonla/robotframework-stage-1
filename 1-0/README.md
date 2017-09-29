@@ -1,4 +1,4 @@
-# Stage 1-0 : เตรียมความพร้อม
+# Robot Framework - Stage 1-0 : เตรียมความพร้อม
 
 ## ติดตั้ง Python 3 และ Pip
 

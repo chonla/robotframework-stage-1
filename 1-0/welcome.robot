@@ -1,22 +1,31 @@
+*** Settings ***
+Library    SeleniumLibrary
+Test Setup    Set Things Up
+Test Teardown    Close All Browsers
+
 *** Variables ***
 @{WELCOME_MESSAGE}
-    ...    ${\n}
-    ...    สวัสดีทุกคน
-    ...    หวังว่าจะสนุกกับคลาสนี้นะครับ
-    ...    สวัสดีจ้ะ
-    ...    ${SPACE}${SPACE}${SPACE}${SPACE}.-'"""""'-.
-    ...    ${SPACE}${SPACE}.'${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}`.
-    ...    ${SPACE}/${SPACE}${SPACE}${SPACE}.${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}.${SPACE}${SPACE}${SPACE}${SPACE}\\
-    ...    :${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}:
-    ...    |${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}|
-    ...    :${SPACE}${SPACE}${SPACE}\\${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}/${SPACE}${SPACE}${SPACE}${SPACE}:
-    ...    ${SPACE}\\${SPACE}${SPACE}${SPACE}`.____.'${SPACE}${SPACE}${SPACE}${SPACE}/
-    ...    ${SPACE}${SPACE}`.${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}${SPACE}.'
-    ...    ${SPACE}${SPACE}${SPACE}${SPACE}`-._____.-'
-
+    ...    <h1>สวัสดีทุกคน!!</h1><br>
+    ...    หวังว่าจะสนุกกับคลาส <font color='red'>Robot Framework - Stage 1</font> นะครับ<br>
+    ...    <br><br>
+    ...    ขอให้บันเทิงครับ :)<br>
+    ...    <font color='red' size='6'>&#10084;&#10084;&#10084;</font>
+${WELCOME_FILE}    file://${CURDIR}/static/hello.html
+${DELAY}    1s
 
 *** Test Cases ***
-Welcome
+Show Welcome Message
     : FOR    ${line}    IN    @{WELCOME_MESSAGE}
-    \    Log To Console    ${line}
-    \    Sleep    0.5s
+    \    Print ${line}
+
+*** Keywords ***
+Set Things Up
+    Open Browser    ${WELCOME_FILE}    gc
+    Set Selenium Speed    ${DELAY}
+
+Print ${message}
+    Execute Javascript
+    ...    (function() {
+    ...         var o = document.getElementById("msgbox");
+    ...         o.innerHTML = o.innerHTML + "${message}";
+    ...    })();

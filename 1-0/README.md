@@ -1,5 +1,7 @@
 # Robot Framework - Stage 1-0 : เตรียมความพร้อม
 
+สิ่งที่เราจะต้องทำในขั้นตอนนี้คือ การติดตั้ง Python3 และ Pip, การติดตั้ง Dependencies ที่ต้องใช้ และการติดตั้ง Web Driver ที่ต้องการ
+
 ## ติดตั้ง Python 3 และ Pip
 
 ### Windows (ผ่าน chocolatey)
@@ -83,10 +85,24 @@ pip3 install --pre --upgrade -r packages.txt
 
 ดาวน์โหลดเสร็จแล้ว กลับไปติดตั้ง dependencies ใหม่ตามคำสั่งด้านบน
 
+## ติดตั้ง Web Driver
+
+Web Driver จะเป็นตัวกลางระหว่าง Selenium กับ Browser ในเครื่องที่เรา ดาวน์โหลด Web Driver มาวางไว้ใน Path ไหนก็ได้ในเครื่องเรา และเพิ่ม Path นั้นลงไปใน PATH Environment ของเครื่อง
+
+ในคลาสนี้จะใช้ Google Chrome เป็นหลัก ดังนั้น โหลด Chrome Web Driver มาด้วยนะครับ
+
+| Web Driver | Download |
+| ---------- | -------- |
+| Chrome | https://sites.google.com/a/chromium.org/chromedriver/downloads |
+| Firefox | https://github.com/mozilla/geckodriver/releases |
+
+ที่สำคัญคือ เมื่อ Set PATH แล้ว ให้ Restart Browser ด้วย ถ้าเป็น OSX หรือ Ubuntu สามารถ ```source .profile``` ของ shell ได้เลย
+
 ## ลอง
 
-ลองรันคำสั่ง ```pybot welcome.robot``` ดู มันควรจะผ่าน
+ลองรันคำสั่ง ```pybot welcome.robot``` ดู มันควรจะเปิด Browser และแสดงข้อความต้อนรับออกมา
 
 ## ยังไงต่อ
 
-ไป Stage ถัดไปสิจ๊ะ จะรออะไร
+[ไป Stage ถัดไปสิจ๊ะ จะรออะไร](../1-1/README.md)
+หรือจะ [ดูเนื้อหาทั้งหมดได้จากสารบัญ](../README.md) ก็ได้นะ

@@ -8,6 +8,19 @@
 
 เข้าใจโครงสร้างไฟล์ Test ได้
 
+## ตัวอย่าง
+
+* Ex 1 - ตัวอย่างอย่างง่าย
+* Ex 2 - การเขียนหลาย test case
+* Ex 3 - รู้จักกับ keyword
+* Ex 4 - รู้จักกับตัวแปร
+* Ex 5 - กำหนดค่า default ให้ parameter ของ keyword
+* Ex 6 - รู้จักกับ setting และ setup และ teardown
+
+## ลอง
+
+* Task 1 - Factorial
+
 ---
 
 |   |   |   |

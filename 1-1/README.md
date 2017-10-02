@@ -14,8 +14,7 @@
 * Ex 2 - การเขียนหลาย test case
 * Ex 3 - รู้จักกับ keyword
 * Ex 4 - รู้จักกับตัวแปร
-* Ex 5 - กำหนดค่า default ให้ parameter ของ keyword
-* Ex 6 - รู้จักกับ setting และ setup และ teardown
+* Ex 5 - รู้จักกับ setting และ setup และ teardown
 
 ## ลองทำ
 

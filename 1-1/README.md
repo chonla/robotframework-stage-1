@@ -4,7 +4,7 @@
 
 * ไม่มี
 
-## Expectation
+## ความคาดหวัง
 
 เข้าใจโครงสร้างไฟล์ Test ได้
 
@@ -17,7 +17,7 @@
 * Ex 5 - กำหนดค่า default ให้ parameter ของ keyword
 * Ex 6 - รู้จักกับ setting และ setup และ teardown
 
-## ลอง
+## ลองทำ
 
 * Task 1 - Factorial
 

@@ -1,8 +1,24 @@
-# Robot Framework - Stage 1-2 : ตัวแปร
+# Robot Framework - Stage 1-2 : Variables
 
-// TODO: อธิบายเกี่ยวกับชนิดของตัวแปรใน Robot
+## Library ที่ต้องใช้
 
-## ชนิดของตัวแปร
+* ไม่มี
+
+## ความคาดหวัง
+
+เข้าใจชนิดของตัวแปรแบบต่าง ๆ ได้
+
+## ตัวอย่าง
+
+* Ex 1 - ชนิดของตัวแปร
+* Ex 2 - local/global
+* Ex 3 - ส่งค่าตัวแปรไปยัง keyword และรับค่าจาก keyword
+* Ex 4 - optional parameter
+* Ex 5 - optional parameter หลายตัว
+
+## ลองทำ
+
+* Task 1 - // TODO
 
 ---
 

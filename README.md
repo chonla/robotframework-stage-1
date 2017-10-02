@@ -4,7 +4,7 @@
 * [Stage 1-1 : File Structure](1-1/README.md)
 * [Stage 1-2 : Test Structure](1-2/README.md)
 * [Stage 1-3 : Variables](1-3/README.md)
-* [Stage 1-4 : Locator](1-4/README.md)
+* [Stage 1-4 : Locators](1-4/README.md)
 * [Stage 1-5 : Test cases](1-5/README.md)
 * [Stage 1-6 : Keywords](1-6/README.md)
 * [Stage 1-7 : Tags](1-7/README.md)

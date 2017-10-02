@@ -1,28 +1,29 @@
-# Task
-# - Correct table with data below
-# - Table name should be in between ***
-# - Arguments should be separated with 4 spaces or | , not TAB
+*** Settings ***
+Documentation    Create Factorial Test Case
 
-# --------------
-# Settings table
-# --------------
-# Library: SeleniumLibrary
-# Test Setup: Set Things Up
-# Test Teardown: Close All Browsers
+*** Test Cases ***
+Factorial Of One Should Give One
+    ${result}=    Factorial    1
+    Should Be Equal As Numbers    ${result}    1
 
-# ---------------
-# Variables table
-# ---------------
-# ${URL}: https://google.com
+Factorial Of Two Should Give Two
+    ${result}=    Factorial    2
+    Should Be Equal As Numbers    ${result}    2
 
-# ----------------
-# Test Cases table
-# ----------------
-# Open Google
-#     Page Should Contain    Google
+Factorial Of Three Should Give Six
+    ${result}=    Factorial    3
+    Should Be Equal As Numbers    ${result}    6
 
-# --------------
-# Keywords table
-# --------------
-# Set Things Up
-#     Open Browser    ${URL}    gc
+*** Keywords ***
+Factorial
+    [Arguments]    ${n}
+    ${f}=    Set Variable    1
+    #
+    # Complete this keyword.
+    # You can use for loop control flow.
+    # For loop syntax is as follow.
+    #
+    # FOR    ${i}    IN RANGE    0    ${n}
+    # \    ${f}=    ...
+    #
+    [Return]    ${f}

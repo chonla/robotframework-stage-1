@@ -1,6 +1,12 @@
-# Robot Framework - Stage 1-1 : โครงสร้าง
+# Robot Framework - Stage 1-1 : Test Structure
 
-// TODO: อธิบายเกี่ยวกับลักษณะของโครงสร้างในไฟล์
+## Library ที่ต้องใช้
+
+* ไม่มี
+
+## Expectation
+
+เข้าใจโครงสร้างไฟล์ Test ได้
 
 ---
 

@@ -1,26 +1,23 @@
 *** Variables ***
-${FIRST_NAME}    John
-${LAST_NAME}    Farmer
-${AGE}    62
-${NEXT_YEAR_AGE}    63
-@{KIDS}    Mary    Peter    Frank
-&{PETS}    Dog=George    Cat=Lady    Cow=Ben    Bird=Jim    Pig=Big
+${OPERAND1}    1
+${OPERAND2}    2
+${EXPECTED_ADDITION_RESULT}    3
+@{X_SERIES}    1    2    3    4    5    6    7    8    9    10
+${EXPECTED_SUM_SERIES}    55
+&{XY_SERIES}    1=1    2=4    3=9    4=16    5=25
 
 *** Test Cases ***
-Greeting
-    ${result}=    Catenate    ${FIRST_NAME}    ${LAST_NAME}    is a    ${AGE}    years old man
-    Should Be Equal    ${result}    John Farmer is a 62 years old man
+Simple Add
+    ${result}=    Evaluate    ${OPERAND1} + ${OPERAND2}
+    Should Be Equal As Numbers    ${result}    ${EXPECTED_ADDITION_RESULT}
 
-John's Age In Next Year
-    ${next_age}=    Evaluate    ${AGE} + 1
-    Should Be Equal As Numbers    ${NEXT_YEAR_AGE}    ${next_age}
+Summation Of Number Series
+    ${sum}=    Set Variable    0
+    : FOR    ${x}    IN    @{X_SERIES}
+    \    ${sum}=    Evaluate    ${sum} + ${x}
+    Should Be Equal As Numbers    ${EXPECTED_SUM_SERIES}    ${sum}
 
-John's Kids
-    ${number_of_kids}=    Get Length    ${KIDS}
-    Log To Console     ${FIRST_NAME} has ${number_of_kids} kids
-    : FOR    ${kid}    IN    @{KIDS}
-    \    Log To Console    ${kid}
-
-John's Pets
-    : FOR    ${pet}    IN    @{PETS.keys()}
-    \    Log To Console    ${FIRST_NAME} has a ${pet} named ${PETS["${pet}"]} in his farm
+Power Of Number
+    : FOR    ${x}    IN    @{XY_SERIES.keys()}
+    \    ${pow}=    Evaluate    ${x} * ${x}
+    \    Should Be Equal As Numbers    ${XY_SERIES["${x}"]}    ${pow}

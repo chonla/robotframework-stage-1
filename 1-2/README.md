@@ -16,7 +16,6 @@
 * Ex 4 - ส่งค่าตัวแปรไปยัง keyword
 * Ex 5 - รับค่ากลับมาจาก keyword
 * Ex 6 - optional parameter
-* Ex 7 - optional parameter หลายตัว
 
 ## ลองทำ
 

@@ -30,9 +30,7 @@ Fibonacci List
     @{fib}    Create List
     Run Keyword If    ${n} > 0    Append To List    ${fib}    ${0}    ${1}
     : FOR    ${i}    IN RANGE    2    ${n} + 1
-    \     ${n_2}=    Get From List    ${fib}    ${i-2}
-    \     ${n_1}=    Get From List    ${fib}    ${i-1}
-    \     ${n_0}=    Evaluate    ${n_1} + ${n_2}
+    \     ${n_0}=    Evaluate    ${fib[${i}-1]} + ${fib[${i}-2]}
     \     Append To List    ${fib}    ${n_0}
     ${fib}=    Get Slice From List    ${fib}    1
     [Return]    ${fib}

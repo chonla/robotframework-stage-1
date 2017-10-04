@@ -13,9 +13,10 @@
 * Ex 1 - ชนิดของตัวแปร
 * Ex 2 - ตัวแปร built-in
 * Ex 3 - local/global
-* Ex 4 - ส่งค่าตัวแปรไปยัง keyword และรับค่าจาก keyword
-* Ex 5 - optional parameter
-* Ex 6 - optional parameter หลายตัว
+* Ex 4 - ส่งค่าตัวแปรไปยัง keyword
+* Ex 5 - รับค่ากลับมาจาก keyword
+* Ex 6 - optional parameter
+* Ex 7 - optional parameter หลายตัว
 
 ## ลองทำ
 

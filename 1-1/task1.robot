@@ -1,20 +1,24 @@
 *** Settings ***
-Documentation    Create Factorial Test Case
+Documentation    Complete Factorial Keyword
 
 *** Test Cases ***
 Factorial Of One Should Give One
+    [Tags]   task
     ${result}=    Factorial    1
     Should Be Equal As Numbers    ${result}    1
 
 Factorial Of Two Should Give Two
+    [Tags]   task
     ${result}=    Factorial    2
     Should Be Equal As Numbers    ${result}    2
 
 Factorial Of Three Should Give Six
+    [Tags]   task
     ${result}=    Factorial    3
     Should Be Equal As Numbers    ${result}    6
 
 Factorial Of Ten Should Give 3628800
+    [Tags]   task
     ${result}=    Factorial    10
     Should Be Equal As Numbers    ${result}    3628800
 

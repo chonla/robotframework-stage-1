@@ -1,4 +1,4 @@
-# Robot Framework - Stage 1-2 : Variables
+# Robot Framework - Stage 1-2 : Locator
 
 ## Library ที่ต้องใช้
 

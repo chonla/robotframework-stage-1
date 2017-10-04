@@ -1,9 +1,14 @@
 *** Variables ***
+# Scalar
 ${OPERAND1}    1
 ${OPERAND2}    2
 ${EXPECTED_ADDITION_RESULT}    3
-@{X_SERIES}    1    2    3    4    5    6    7    8    9    10
 ${EXPECTED_SUM_SERIES}    55
+
+# List
+@{X_SERIES}    1    2    3    4    5    6    7    8    9    10
+
+# Dictionary
 &{XY_SERIES}    1=1    2=4    3=9    4=16    5=25
 
 *** Test Cases ***

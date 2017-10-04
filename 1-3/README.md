@@ -1,0 +1,26 @@
+# Robot Framework - Stage 1-2 : Variables
+
+## Library ที่ต้องใช้
+
+* SeleniumLibrary
+
+## ความคาดหวัง
+
+เข้าใจการทดสอบหน้าเว็บ รู้จักการใช้งาน locator
+
+## ตัวอย่าง
+
+* Ex 1 - ตัวอย่างอย่างง่าย
+* Ex 2 - id locator
+* Ex 3 - xpath locator
+
+## ลองทำ
+
+* Task 1 - // TODO
+
+---
+
+|   |   |   |
+| - | - | - |
+| [เรื่องก่อนหน้า](../1-2/README.md) | [INDEX](../README.md) | [เรื่องถัดไป](../1-4/README.md) |
+|   |   |   |

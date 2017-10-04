@@ -4,4 +4,4 @@ output.xml
 .DS_Store
 selenium*.png
 *.log
-task*_solution.robot
+task*-solution.robot

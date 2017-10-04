@@ -1,4 +1,4 @@
-# Robot Framework - Stage 1-2 : Locator
+# Robot Framework - Stage 1-3 : Locators
 
 ## Library ที่ต้องใช้
 

@@ -1,0 +1,22 @@
+*** Settings ***
+Library    SeleniumLibrary
+Test Setup    Go To Test Site
+Test Teardown    Close All Browsers
+
+*** Variables ***
+${URL}    https://robot-stage-1.firebaseapp.com
+${BROWSER}    gc
+${USERNAME}    demouser
+${PASSWORD}    demopassword
+
+*** Test Cases ***
+After Login Should Redirect To Dashboard
+    Click Element    go_to_signin
+    Input Text    xpath=//*/input[@type="text"]    ${USERNAME}
+    Input Password    xpath=//*/input[@type="password"]    ${PASSWORD}
+    Click Element    xpath=//*/button[@type="submit"]
+    Location Should Be    ${URL}/dashboard.html
+
+*** Keywords ***
+Go To Test Site
+    Open Browser    ${URL}    ${BROWSER}

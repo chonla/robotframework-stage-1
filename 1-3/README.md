@@ -13,6 +13,8 @@
 * Ex 1 - ตัวอย่างอย่างง่าย
 * Ex 2 - id locator
 * Ex 3 - xpath locator
+* Ex 4 - Form element
+* Ex 5 - Capture screenshot
 
 ## ลองทำ
 

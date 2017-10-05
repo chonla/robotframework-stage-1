@@ -5,3 +5,4 @@ output.xml
 selenium*.png
 *.log
 task*-solution.robot
+create-item-*-screen.png

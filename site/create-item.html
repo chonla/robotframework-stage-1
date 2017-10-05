@@ -73,7 +73,7 @@
 
         <ul class="nav nav-pills flex-column">
           <li class="nav-item">
-            <a class="nav-link active" id="go-to-create-item" href="create-item.html">Create Item <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" id="go_to_create_item" href="create-item.html">Create Item <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Nav item again</a>
@@ -116,21 +116,21 @@
               <div class="form-group">
                 <label for="inputGender">เพศ</label>
                 <select class="form-control" id="inputGender">
-                    <option>ชาย</option>
-                    <option>หญิง</option>
-                    <option>ไม่ระบุ</option>
+                    <option value="male">ชาย</option>
+                    <option value="female">หญิง</option>
+                    <option value="other">ไม่ระบุ</option>
                   </select>
               </div>
               <div class="form-group">
                 <label for="inputInterest">ความสนใจ</label>
                 <select multiple class="form-control" id="inputInterest">
-                    <option>รถ</option>
-                    <option>สัตว์เลี้ยง</option>
-                    <option>เทคโนโลยี</option>
-                    <option>ช้อปปิ้ง</option>
-                    <option>หนังสือ</option>
-                    <option>ถ่ายภาพ</option>
-                    <option>อื่น ๆ</option>
+                    <option value="car">รถ</option>
+                    <option value="pet">สัตว์เลี้ยง</option>
+                    <option value="technology">เทคโนโลยี</option>
+                    <option value="shopping">ช้อปปิ้ง</option>
+                    <option value="book">หนังสือ</option>
+                    <option value="photography">ถ่ายภาพ</option>
+                    <option value="other">อื่น ๆ</option>
                   </select>
               </div>
               <div class="form-group">
@@ -148,6 +148,25 @@
           </div>
         </section>
       </main>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">สำเร็จ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="buttonClose">ปิด</button>
+        </div>
+      </div>
     </div>
   </div>
 

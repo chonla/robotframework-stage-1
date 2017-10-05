@@ -15,7 +15,7 @@
 
 ## Beyond
 
-* [Stage 1-4 : Abstract keywords](1-4/README.md)
+* [Stage 1-4 : Better keywords](1-4/README.md)
 * [Stage 1-5 : Behavior driven](1-5/README.md)
 * [Stage 1-6 : Data driven](1-6/README.md)
 * [Stage 1-7 : Tags](1-7/README.md)

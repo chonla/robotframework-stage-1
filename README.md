@@ -11,14 +11,16 @@
 
 ## Web Testing
 
-* [Stage 1-3 : Locators](1-4/README.md)
+* [Stage 1-3 : Locators](1-3/README.md)
+* [Stage 1-4 : Form Elements](1-4/README.md)
+* [Stage 1-5 : Capture result screen](1-5/README.md)
 
 ## Beyond
 
-* [Stage 1-4 : Tags](1-7/README.md)
-* [Stage 1-5 : Data driven](1-8/README.md)
-* [Stage 1-6 : Headless](1-9/README.md)
-* [Stage 1-7 : Configurable execution](1-10/README.md)
-* [Stage 1-8 : RESTful API testing](1-11/README.md)
-* [Stage 1-9 : Custom libraries](1-12/README.md)
-* [Stage 1-10 : Parallel execution](1-13/README.md)
+* [Stage 1-6 : Tags](1-6/README.md)
+* [Stage 1-7 : Data driven/Behavior driven](1-7/README.md)
+* [Stage 1-8 : Headless](1-8/README.md)
+* [Stage 1-9 : Configurable execution](1-9/README.md)
+* [Stage 1-10 : RESTful API testing](1-10/README.md)
+* [Stage 1-11 : Custom libraries](1-11/README.md)
+* [Stage 1-12 : Parallel execution](1-12/README.md)

@@ -24,3 +24,7 @@
 * [Stage 1-10 : RESTful API testing](1-10/README.md)
 * [Stage 1-11 : Custom libraries](1-11/README.md)
 * [Stage 1-12 : Parallel execution](1-12/README.md)
+
+## Test Site
+
+* https://robot-stage-1.firebaseapp.com

@@ -15,6 +15,7 @@
 * Ex 3 - xpath locator
 * Ex 4 - Form element
 * Ex 5 - Capture screenshot
+* Ex 6 - Slow response
 
 ## ลองทำ
 

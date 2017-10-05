@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107485997-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments) };
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107485997-1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Robot Framework - Stage 1 - Test Site - Signin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/octicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+      aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Export</a>
+          </li>
+        </ul>
+
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" id="go-to-create-item" href="create-item.html">Create Item <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nav item again</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">One more nav</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Another nav item</a>
+          </li>
+        </ul>
+
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nav item again</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">One more nav</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Another nav item</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+        <h1>Create Item</h1>
+
+        <section class="row placeholders">
+          <div class="col-sm-10 placeholder">
+            <form method="post" id="create-form" action="go-to-dashboard.html">
+              <div class="form-group">
+                <label for="inputName">ชื่อ นามสกุล</label>
+                <input type="text" class="form-control" id="inputName" placeholder="ชื่อ นามสกุล" required autofocus>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">อีเมล</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="อีเมล" required>
+              </div>
+              <div class="form-group">
+                <label for="inputGender">เพศ</label>
+                <select class="form-control" id="inputGender">
+                    <option>ชาย</option>
+                    <option>หญิง</option>
+                    <option>ไม่ระบุ</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="inputInterest">ความสนใจ</label>
+                <select multiple class="form-control" id="inputInterest">
+                    <option>รถ</option>
+                    <option>สัตว์เลี้ยง</option>
+                    <option>เทคโนโลยี</option>
+                    <option>ช้อปปิ้ง</option>
+                    <option>หนังสือ</option>
+                    <option>ถ่ายภาพ</option>
+                    <option>อื่น ๆ</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="inputDetail">รายละเอียด</label>
+                <textarea class="form-control" id="inputDetail" rows="3"></textarea>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="inputChangePassword">
+                    <input class="form-check-input" id="inputChangePassword" type="checkbox" value="">
+                    บังคับให้เปลี่ยนรหัสผ่านหลังจากล็อกอินครั้งแรก
+                  </label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block" type="submit" id="buttonConfirm">ยืนยัน</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/create-item.js"></script>
+</body>
+
+</html>

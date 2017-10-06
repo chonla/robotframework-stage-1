@@ -15,6 +15,7 @@
 * Ex 3 - รู้จักกับ keyword
 * Ex 4 - รู้จักกับตัวแปร
 * Ex 5 - รู้จักกับ setting และ setup และ teardown
+* Ex 6 - ใช้ settings/keywords/variables ร่วมกัน
 
 ## ลองทำ
 

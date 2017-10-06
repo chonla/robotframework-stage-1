@@ -16,7 +16,6 @@
 * Ex 4 - ส่งค่าตัวแปรไปยัง keyword
 * Ex 5 - รับค่ากลับมาจาก keyword
 * Ex 6 - Optional parameter
-* Ex 7 - Share settings/keywords/variables
 
 ## ลองทำ
 

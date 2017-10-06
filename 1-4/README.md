@@ -10,7 +10,8 @@
 
 ## ตัวอย่าง
 
-* Ex 1 - Abstract keywords
+* Ex 1 - Keywords abstraction
+* Ex 2 - 
 
 ## ลองทำ
 

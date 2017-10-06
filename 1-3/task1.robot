@@ -45,6 +45,10 @@ Retry
     #
     # You can use "Wait Until Keyword Succeeds" to block execution until keyword is successfully executed.
     #
+    # Usage of 
+    #
+    #     Wait Until Keyword Succeeds    retry    retry_interval    kw_name    *args
+    #
 
 
 

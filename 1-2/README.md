@@ -12,10 +12,11 @@
 
 * Ex 1 - ชนิดของตัวแปร
 * Ex 2 - ตัวแปร built-in
-* Ex 3 - local/global
+* Ex 3 - Local/Global
 * Ex 4 - ส่งค่าตัวแปรไปยัง keyword
 * Ex 5 - รับค่ากลับมาจาก keyword
-* Ex 6 - optional parameter
+* Ex 6 - Optional parameter
+* Ex 7 - Share settings/keywords/variables
 
 ## ลองทำ
 

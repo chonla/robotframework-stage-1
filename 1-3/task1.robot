@@ -13,19 +13,12 @@ ${TIMEOUT}    5s
 ${INTERVAL_TIMEOUT}    1s
 
 *** Test Cases ***
-After Login Should Redirect To Dashboard
-    Click Element    go_to_slow_signin
-    Input Text    inputUser    ${USERNAME}
-    Input Password    inputPassword    ${PASSWORD}
-    Click Element    buttonLogin
-    Retry    Location Should Be    ${URL}/dashboard.html
-
 Slow Loading Form Should Be Rendered
     Click Element    go_to_signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
-    Click Element    go_to_slow_form
+    Retry    Click Element    go_to_slow_form
     Retry    Element Should Be Visible    inputEmail
     Retry    Element Should Be Visible    buttonGoBack
 

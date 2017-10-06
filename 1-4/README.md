@@ -11,7 +11,8 @@
 ## ตัวอย่าง
 
 * Ex 1 - Keywords abstraction
-* Ex 2 - 
+* Ex 2 - Keywords readability
+* Ex 3 - Keywords complexity
 
 ## ลองทำ
 

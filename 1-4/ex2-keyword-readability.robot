@@ -16,11 +16,13 @@ After Success Login, Page Should Redirect To Dashboard
     Page Should Be Redirected To Dashboard
 
 After Success Login, Page Should Redirect To Dashboard - Too Long
+    [Tags]    bad
     Open Login Page By Clicking Sign In Link On Home Page
     Input Valid Username And Valid Password Into Login Form And Click Login Button
     Login Should Be Success And Page Should Be Redirected To Dashboard
 
 After Success Login, Page Should Redirect To Dashboard - Too Short
+    [Tags]    bad
     Go Login
     Login
     Should Be Dashboard
@@ -28,8 +30,18 @@ After Success Login, Page Should Redirect To Dashboard - Too Short
 After Success Login, Page Should Redirect To Dashboard - Unnecessary documentation
     [Documentation]    Open browser and go to login page and then login with a valid credential.
     ...                Page should be redirected to dashboard page.
+    [Tags]    bad
     Go To Login Page
     Login With Valid Credential
+    Page Should Be Redirected To Dashboard
+
+After Success Login, Page Should Redirect To Dashboard - Repeating documentation
+    [Tags]    bad
+    # Open browser and go to login page
+    Go To Login Page
+    # Login with a valid credential
+    Login With Valid Credential
+    # Page should be redirected to dashboard page
     Page Should Be Redirected To Dashboard
 
 *** Keywords ***

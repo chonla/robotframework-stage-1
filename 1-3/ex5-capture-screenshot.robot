@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Test Setup    Go To Create Item Page
+Test Setup    Initialize Test
 Test Teardown    Close All Browsers
 
 *** Variables ***
@@ -14,11 +14,17 @@ Go To Create Iteam Page And Capture Screenshot
     Capture Page Screenshot    create-item-{index}-screen.png
 
 *** Keywords ***
-Go To Create Item Page
+Initialize Test
     Set Selenium Speed    0.1s
     Open Browser    ${URL}    ${BROWSER}
+    Sign In With Valid Credential
+    Go To Create Item Page
+
+Sign In With Valid Credential
     Click Element    go_to_signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
+
+Go To Create Item Page
     Click Element    go_to_create_item

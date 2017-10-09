@@ -10,7 +10,7 @@ ${USERNAME}    demouser
 ${PASSWORD}    demopassword
 
 *** Test Cases ***
-After Login Should Redirect To Dashboard
+After Login Success, Page Should Be Redirected To Dashboard
     Go To Login Page
     Login With Valid Credential
     Page Should Be Redirected To Dashboard

@@ -16,17 +16,18 @@
 ## A little bit harder
 
 * [Stage 1-4 : Better keywords](1-4/README.md)
-* [Stage 1-5 : Behavior driven](1-5/README.md)
+* [Stage 1-5 : Good test cases](1-5/README.md)
 * [Stage 1-6 : Data driven](1-6/README.md)
 * [Stage 1-7 : Tags](1-7/README.md)
 
-## One step further
+## Nice to know
 
-* [Stage 1-8 : Headless](1-8/README.md)
-* [Stage 1-9 : Configurable execution](1-9/README.md)
-* [Stage 1-10 : RESTful API testing](1-10/README.md)
-* [Stage 1-11 : Custom libraries](1-11/README.md)
-* [Stage 1-12 : Parallel execution](1-12/README.md)
+* [Stage 1-8 : Behavior driven](1-5/README.md)
+* [Stage 1-9 : Headless](1-8/README.md)
+* [Stage 1-10 : Configurable execution](1-9/README.md)
+* [Stage 1-11 : RESTful API testing](1-10/README.md)
+* [Stage 1-12 : Custom libraries](1-11/README.md)
+* [Stage 1-13 : Parallel execution](1-12/README.md)
 
 ## Test site
 

@@ -11,24 +11,18 @@ ${PASSWORD}    demopassword
 
 *** Test Cases ***
 When Create User Success Success Modal Should Be Display
-    Go To Create Item Page
-    Fill Create Form
-    Click Save Button
-    Item Should Be Successfully Saved
-
-When Create User Success Success Modal Should Be Display - Not 3A
-    [Tags]    bad
-    Go To Create Item Page
-    Location Should Be    ${URL}/create-item.html
-    Fill Create Form
-    Selection Count Should Match    inputInterest    3
-    Click Save Button
-    Item Should Be Successfully Saved
+    Given User Has Already Logged In
+    When Go To Create Item Page
+    And Fill Create Form
+    And Click Save Button
+    Then Item Should Be Successfully Saved
 
 *** Keywords ***
 Initialize Test
     Set Selenium Speed    0.1s
     Open Browser    ${URL}    ${BROWSER}
+
+User Has Already Logged In
     Sign In With Valid Credential
 
 Sign In With Valid Credential

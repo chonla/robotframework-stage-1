@@ -10,13 +10,13 @@ ${USERNAME}    demouser
 ${PASSWORD}    demopassword
 
 *** Test Cases ***
-When Create User Success Success Modal Should Be Display
+When Create Item Success Success Modal Should Be Display
     Go To Create Item Page
     Fill Create Form
     Click Save Button
     Item Should Be Successfully Saved
 
-When Create User Success Success Modal Should Be Display - Not 3A
+When Create Item Success Success Modal Should Be Display - Not 3A
     [Tags]    bad
     Go To Create Item Page
     Location Should Be    ${URL}/create-item.html

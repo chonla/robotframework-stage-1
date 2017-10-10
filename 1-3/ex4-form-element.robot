@@ -13,7 +13,7 @@ ${PASSWORD}    demopassword
 Should Go To Create Iteam Page From Side Navigation
     Location Should Be    ${URL}/create-item.html
 
-When Create User Success Success Modal Should Be Display
+When Create Item Success Success Modal Should Be Display
     Input Text    inputName    สมเด่น เกือบดัง
     Input Text    inputEmail    somdenkuabdung@somemail.com
     Select From List By Value    inputGender    male

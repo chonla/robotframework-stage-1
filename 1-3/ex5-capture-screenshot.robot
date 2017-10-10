@@ -10,7 +10,7 @@ ${USERNAME}    demouser
 ${PASSWORD}    demopassword
 
 *** Test Cases ***
-Go To Create Iteam Page And Capture Screenshot
+Go To Create Item Page And Capture Screenshot
     Capture Page Screenshot    create-item-{index}-screen.png
 
 *** Keywords ***

@@ -25,22 +25,19 @@ function append_user_table(id, key, data) {
   var tr = $('<tr>')
     .attr('id', 'data-row-' + key)
     .append($('<td>').text(data.name))
-    .append($('<td>').text(key))
+    .append($('<td>').text(data.login))
     .append($('<td>').append(rm));
   body.append(tr);
 }
 
 function remove_user(l) {
-  var database = firebase.database();
-  var userRef = database.ref("users/" + l);
-  userRef.remove();
-  var usernameRef = database.ref("usernames");
-  usernameRef.on('child_added', function (data) {
-    if (l === data.val()) {
-      data.ref.remove();
-      usernameRef.off();
-    }
+  $('#modalLoading').on('shown.bs.modal', function() {
+    firebase.database().ref("users/" + l).remove(function() {
+      $('#modalLoading').modal('hide');    
+    });
   });
+
+  $('#modalLoading').modal();
 }
 
 $(function () {

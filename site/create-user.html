@@ -28,13 +28,15 @@
     <a class="navbar-brand" href="#">Dashboard</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
       aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Settings</a>
@@ -79,7 +81,9 @@
             <a class="nav-link" id="go_to_slow_form" href="slow-form.html">สร้างข้อมูลลูกค้าใหม่ (โหลดช้า)</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" id="go_to_create_user" href="create-user.html">สร้างข้อมูลผู้ใช้ใหม่ <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" id="go_to_create_user" href="create-user.html">สร้างข้อมูลผู้ใช้ใหม่
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="go_to_user_list" href="list-user.html">รายชื่อผู้ใช้</a>
@@ -136,8 +140,8 @@
         <div class="modal-header">
           <h5 class="modal-title" id="modal-title">สำเร็จ</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body" id="modal-body">
         </div>
@@ -154,8 +158,8 @@
         <div class="modal-header">
           <h5 class="modal-title" id="modal-error-title">ผิดพลาด</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body" id="modal-error-body">
         </div>
@@ -172,6 +176,15 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
     crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyB-KQr5gtClMdlR3YBkwAAftYPxznviVnc",
+      authDomain: "robot-stage-1.firebaseapp.com",
+      databaseURL: "https://robot-stage-1.firebaseio.com"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="assets/js/common.js"></script>
   <script src="assets/js/create-user.js"></script>
 </body>

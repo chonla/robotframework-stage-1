@@ -18,19 +18,29 @@
 })();
 
 function create_user(u, l, p) {
-  var users = localStorage.getItem("users") || "{}";
-  var db = JSON.parse(users);
-  if (db.hasOwnProperty(l)) {
-    return false;
-  }
-  db[l] = {
+  var database = firebase.database();
+  var userRef = database.ref("users/" + l);
+
+  userRef.set({
     "name": u,
     "login": l,
-    "password": p
-  };
+    "password": p,
+    "locked": false
+  });
 
-  var flat = JSON.stringify(db);
-  localStorage.setItem("users", flat);
+  // var users = localStorage.getItem("users") || "{}";
+  // var db = JSON.parse(users);
+  // if (db.hasOwnProperty(l)) {
+  //   return false;
+  // }
+  // db[l] = {
+  //   "name": u,
+  //   "login": l,
+  //   "password": p
+  // };
+
+  // var flat = JSON.stringify(db);
+  // localStorage.setItem("users", flat);
   return true;
 }
 

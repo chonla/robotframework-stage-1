@@ -28,13 +28,15 @@
     <a class="navbar-brand" href="#">Dashboard</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
       aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Settings</a>
@@ -106,7 +108,6 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>#</th>
                 <th>ชื่อ-นามสกุล</th>
                 <th>ล็อกอิน</th>
                 <th>ลบ</th>
@@ -126,6 +127,15 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
     crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyB-KQr5gtClMdlR3YBkwAAftYPxznviVnc",
+      authDomain: "robot-stage-1.firebaseapp.com",
+      databaseURL: "https://robot-stage-1.firebaseio.com"
+    };
+    firebase.initializeApp(config);
+  </script>
   <script src="assets/js/common.js"></script>
   <script src="assets/js/list-user.js"></script>
 </body>

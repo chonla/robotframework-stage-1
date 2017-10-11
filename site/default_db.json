@@ -1,0 +1,18 @@
+{
+  "users": {
+    "demouser": {
+      "name": "Demo User",
+      "password": "demopassword",
+      "locked": true
+    },
+    "mario": {
+      "name": "มาริโอ้",
+      "password": "dasdFAUDSF",
+      "locked": false
+    }
+  },
+  "usernames": {
+    "0": "demouser",
+    "1": "mario"
+  }
+}

@@ -1,48 +1,48 @@
 function get_users() {
-  var users = localStorage.getItem("users") || "{}";
-  var db = JSON.parse(users);
-  return db;
+  var database = firebase.database();
+  var userRef = database.ref("users");
+  userRef.on('child_added', function (data) {
+    append_user_table("user-table", data.key, data.val());
+  });
+
+  userRef.on('child_removed', function (data) {
+    remove_user_table(data.key);
+  });
 }
 
-function render_user_table(id, users) {
+function remove_user_table(key) {
+  $('#data-row-' + key).remove();
+}
+
+function append_user_table(id, key, data) {
   var body = $("#" + id + " tbody");
-  body.empty();
-  var i = 1;
-  for (var k in users) {
-    var rm = $('<button>')
-      .addClass("btn btn-danger btn-block")
-      .on('click', function() {
-        remove_user(k);
-        refresh_user_table();
-      })
-      .text("ลบ");
-    var tr = $('<tr>')
-      .append($('<td>').text(i++))
-      .append($('<td>').text(users[k].name))
-      .append($('<td>').text(users[k].login))
-      .append($('<td>').append(rm));
-    body.append(tr);
-  }
+  var rm = data.locked ? $('<span>ล็อก</span>') : ($('<button>')
+    .addClass("btn btn-danger btn-block")
+    .on('click', function () {
+      remove_user(key);
+    })
+    .text("ลบ"));
+  var tr = $('<tr>')
+    .attr('id', 'data-row-' + key)
+    .append($('<td>').text(data.name))
+    .append($('<td>').text(key))
+    .append($('<td>').append(rm));
+  body.append(tr);
 }
 
 function remove_user(l) {
-  var users = localStorage.getItem("users") || "{}";
-  var db = JSON.parse(users);
-  if (!db.hasOwnProperty(l)) {
-    return false;
-  }
-  delete db[l];
-
-  var flat = JSON.stringify(db);
-  localStorage.setItem("users", flat);
-  return true;
+  var database = firebase.database();
+  var userRef = database.ref("users/" + l);
+  userRef.remove();
+  var usernameRef = database.ref("usernames");
+  usernameRef.on('child_added', function (data) {
+    if (l === data.val()) {
+      data.ref.remove();
+      usernameRef.off();
+    }
+  });
 }
 
-function refresh_user_table() {
-  var users = get_users();
-  render_user_table("user-table", users);
-}
-
-$(function() {
-  refresh_user_table();
+$(function () {
+  get_users();
 });

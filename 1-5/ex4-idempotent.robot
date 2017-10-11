@@ -64,7 +64,7 @@ Remove Test Data
 
 Go To User List Page
     Go To    ${URL}/list-user.html
-    Wait Until Page Contain Element    button-remove-somboon
+    Wait Until Page Contains Element    button-remove-somboon
 
 Remove Test User Data
     Click Element    button-remove-somboon

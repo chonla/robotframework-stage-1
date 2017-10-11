@@ -23,7 +23,7 @@ function append_user_table(id, key, data) {
     })
     .text("ลบ"));
   var tr = $('<tr>')
-    .attr('id', 'data-row-' + key)
+    .attr('id', 'data-row-' + data.login)
     .append($('<td>').text(data.name))
     .append($('<td>').text(data.login))
     .append($('<td>').append(rm));

@@ -32,6 +32,7 @@ function append_user_table(id, key, data) {
 
 function remove_user(l) {
   $('#modalLoading').on('shown.bs.modal', function() {
+    $('#modalLoading').off('shown.bs.modal');
     firebase.database().ref("users/" + l).remove(function() {
       $('#modalLoading').modal('hide');    
     });

@@ -68,6 +68,7 @@ Go To User List Page
 
 Remove Test User Data
     Click Element    button-remove-somboon
+    Wait Until Page Does Not Contain Element    button-remove-somboon
 
 Retry
     [Arguments]    ${keyword}    ${arguments}=@{EMPTY}

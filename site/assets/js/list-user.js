@@ -18,12 +18,13 @@ function append_user_table(id, key, data) {
   var body = $("#" + id + " tbody");
   var rm = data.locked ? $('<span>ล็อก</span>') : ($('<button>')
     .addClass("btn btn-danger btn-block")
+    .attr("id", "button-remove-" + data.login)
     .on('click', function () {
       remove_user(key);
     })
     .text("ลบ"));
   var tr = $('<tr>')
-    .attr('id', 'data-row-' + data.login)
+    .attr('id', 'data-row-' + key)
     .append($('<td>').text(data.name))
     .append($('<td>').text(data.login))
     .append($('<td>').append(rm));

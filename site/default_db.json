@@ -1,18 +1,28 @@
 {
   "users": {
-    "demouser": {
+    "a": {
+      "login": "demouser",
       "name": "Demo User",
       "password": "demopassword",
       "locked": true
     },
-    "mario": {
+    "b": {
+      "login": "mario",
       "name": "มาริโอ้",
       "password": "dasdFAUDSF",
       "locked": false
+    },
+    "c": {
+      "login": "pracha",
+      "name": "ประชา",
+      "password": "aUAmviOW114",
+      "locked": false
+    },
+    "d": {
+      "login": "somdee",
+      "name": "สมดี",
+      "password": "cjj9w22mAUl",
+      "locked": false
     }
-  },
-  "usernames": {
-    "0": "demouser",
-    "1": "mario"
   }
 }

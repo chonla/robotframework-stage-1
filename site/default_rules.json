@@ -1,13 +1,6 @@
 {
   "rules": {
     ".read": "true",
-    ".write": "true",
-    "users": {
-      "$uid": {
-        "username": {
-          ".validate": "!root.child('usernames').child(newData.val()).exists() ||root.child('usernames').child(newData.val()).val() == $uid"
-        }
-      }
-    }
+    ".write": "true"
   }
 }

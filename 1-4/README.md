@@ -16,7 +16,7 @@
 
 ## ลองทำ
 
-* Task 1 - // TODO
+* Task 1 - Make technical test case more readable
 
 ---
 

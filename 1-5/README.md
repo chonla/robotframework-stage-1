@@ -11,6 +11,9 @@
 ## ตัวอย่าง
 
 * Ex 1 - 3A
+* Ex 2 - Gherkin
+* Ex 3 - Do not mix test cases into an unrelated test suite
+* Ex 4 - Make test idempotent
 
 ## ลองทำ
 

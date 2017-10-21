@@ -11,16 +11,17 @@ ${PASSWORD}    demopassword
 
 *** Test Cases ***
 Login Page Should Be Displayed
-    Click Element    go_to_signin
+    Click Element    signin
     Page Should Contain    ล็อกอิน
 
 After Login Should Redirect To Dashboard
-    Click Element    go_to_signin
+    Click Element    signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
-    Location Should Be    ${URL}/dashboard.html
+    Location Should Be    ${URL}/#/user/dashboard
 
 *** Keywords ***
 Go To Test Site
     Open Browser    ${URL}    ${BROWSER}
+    Set Selenium Speed    800ms

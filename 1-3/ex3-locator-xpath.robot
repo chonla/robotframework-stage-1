@@ -11,11 +11,11 @@ ${PASSWORD}    demopassword
 
 *** Test Cases ***
 After Login Should Redirect To Dashboard
-    Click Element    go_to_signin
+    Click Element    signin
     Input Text    xpath=//*/input[@type="text"]    ${USERNAME}
     Input Password    xpath=//*/input[@type="password"]    ${PASSWORD}
     Click Element    xpath=//*/button[@type="submit"]
-    Location Should Be    ${URL}/dashboard.html
+    Location Should Be    ${URL}/#/user/dashboard
 
 *** Keywords ***
 Go To Test Site

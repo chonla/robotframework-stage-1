@@ -21,10 +21,10 @@ Initialize Test
     Go To Create Item Page
 
 Sign In With Valid Credential
-    Click Element    go_to_signin
+    Click Element    signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
 
 Go To Create Item Page
-    Click Element    go_to_create_item
+    Click Element    create-customer

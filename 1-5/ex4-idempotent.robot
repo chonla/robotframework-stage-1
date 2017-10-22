@@ -27,13 +27,13 @@ Initialize Test
     Sign In With Valid Credential
 
 Sign In With Valid Credential
-    Click Element    go_to_signin
+    Click Element    signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
 
 Go To Create User Page
-    Click Element    go_to_create_user
+    Click Element    create-user
 
 Enter Fullname
     [Arguments]    ${name}
@@ -71,5 +71,5 @@ Remove Test User Data
     Wait Until Page Does Not Contain Element    button-remove-somboon
 
 Retry
-    [Arguments]    ${keyword}    ${arguments}=@{EMPTY}
-    Wait Until Keyword Succeeds    5s    1s    ${keyword}    @{arguments}
+    [Arguments]    @{args}
+    Wait Until Keyword Succeeds    5s    1s    @{args}

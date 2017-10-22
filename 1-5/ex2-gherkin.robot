@@ -12,27 +12,26 @@ ${PASSWORD}    demopassword
 *** Test Cases ***
 When Create User Success Success Modal Should Be Display
     Given User Has Already Logged In
-    When Go To Create Item Page
+    When Go To Create Customer Page
     And Fill Create Form
     And Click Save Button
-    Then Item Should Be Successfully Saved
+    Then Customer Should Be Successfully Saved
 
 *** Keywords ***
 Initialize Test
-    Set Selenium Speed    0.1s
     Open Browser    ${URL}    ${BROWSER}
 
 User Has Already Logged In
     Sign In With Valid Credential
 
 Sign In With Valid Credential
-    Click Element    go_to_signin
+    Click Element    signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
 
-Go To Create Item Page
-    Click Element    go_to_create_item
+Go To Create Customer Page
+    Retry    Click Element    create-customer
 
 Fill Create Form
     Input Text    inputName    สมเด่น เกือบดัง
@@ -40,12 +39,12 @@ Fill Create Form
     Select From List By Value    inputGender    male
     Select From List By Value    inputInterest    car    photography    technology
     Input Text    inputDetail    สมเด่นเป็นคนขยัน ชอบกินกาแฟ
-    Select Checkbox    inputChangePassword
+    Select Checkbox    inputVIP
 
 Click Save Button
     Click Element    buttonConfirm
 
-Item Should Be Successfully Saved
+Customer Should Be Successfully Saved
     Element Should Be Visible    modal
     Element Should Contain    modal    บันทึกสำเร็จ
 

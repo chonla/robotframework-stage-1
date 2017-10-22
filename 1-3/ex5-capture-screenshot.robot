@@ -15,7 +15,7 @@ Go To Create Item Page And Capture Screenshot
 
 *** Keywords ***
 Initialize Test
-    Set Selenium Speed    0.1s
+    Set Selenium Speed    800ms
     Open Browser    ${URL}    ${BROWSER}
     Sign In With Valid Credential
     Go To Create Item Page

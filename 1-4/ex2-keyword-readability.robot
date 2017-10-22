@@ -49,13 +49,13 @@ Go To Test Site
     Open Browser    ${URL}    ${BROWSER}
 
 Open Login Page By Clicking Sign In Link On Home Page
-    Click Element    go_to_signin
+    Click Element    signin
 
 Go To Login Page
-    Click Element    go_to_signin
+    Click Element    signin
 
 Go Login
-    Click Element    go_to_signin
+    Click Element    signin
 
 Login
     Enter Username    ${USERNAME}
@@ -84,10 +84,14 @@ Click Login Button
     Click Element    buttonLogin
 
 Login Should Be Success And Page Should Be Redirected To Dashboard
-    Location Should Be    ${URL}/dashboard.html
+    Retry    Location Should Be    ${URL}/#/user/dashboard
 
 Page Should Be Redirected To Dashboard
-    Location Should Be    ${URL}/dashboard.html
+    Retry    Location Should Be    ${URL}/#/user/dashboard
 
 Should Be Dashboard
-    Location Should Be    ${URL}/dashboard.html
+    Retry    Location Should Be    ${URL}/#/user/dashboard
+
+Retry
+    [Arguments]    @{args}
+    Wait Until Keyword Succeeds    5s    1s    @{args}

@@ -20,7 +20,7 @@ Go To Test Site
     Open Browser    ${URL}    ${BROWSER}
 
 Go To Login Page
-    Click Element    go_to_signin
+    Click Element    signin
 
 Login With Valid Credential
     Enter Username    ${USERNAME}
@@ -39,4 +39,8 @@ Click Login Button
     Click Element    buttonLogin
 
 Page Should Be Redirected To Dashboard
-    Location Should Be    ${URL}/dashboard.html
+    Retry    Location Should Be    ${URL}/#/user/dashboard
+
+Retry
+    [Arguments]    @{args}
+    Wait Until Keyword Succeeds    5s    1s    @{args}

@@ -17,7 +17,7 @@
 
 ## ลองทำ
 
-* Task 1 - // TODO
+* Task 1 - Making an idempotent test case
 
 ---
 

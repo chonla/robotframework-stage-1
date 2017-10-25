@@ -10,8 +10,8 @@
 
 ## ตัวอย่าง
 
-* Ex 1 - 3A
-* Ex 2 - Gherkin
+* Ex 1 - Test Suite Template
+* Ex 2 - Test Case Template
 
 ## ลองทำ
 

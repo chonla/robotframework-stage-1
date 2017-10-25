@@ -1,20 +1,20 @@
 *** Settings ***
 Library    SeleniumLibrary
 Suite Setup    Go To Login Page
-Suite Teardown    Close All Browsers
+#Suite Teardown    Close All Browsers
 Test Teardown    Reset Test
 Test Template    Login With Invalid Credentials Should Fail
 
 *** Variables ***
-${URL}    http://localhost:4200    #https://robot-stage-1.firebaseapp.com
+${URL}    http://localhost:4200     # https://robot-stage-1.firebaseapp.com
 ${BROWSER}    gc
 ${VALID_USERNAME}    demouser
 ${VALID_PASSWORD}    demopassword
 
 *** Test Cases ***                USERNAME             PASSWORD
-Invalid User Name                 invalid              ${VALID_PASSWORD}
-Invalid Password                  ${VALID_USERNAME}    invalid
-Invalid User Name and Password    invalid              invalid
+# Invalid User Name                 invalid              ${VALID_PASSWORD}
+# Invalid Password                  ${VALID_USERNAME}    invalid
+# Invalid User Name and Password    invalid              invalid
 Empty User Name                   ${EMPTY}             ${VALID_PASSWORD}
 Empty Password                    ${VALID_USERNAME}    ${EMPTY}
 Empty User Name and Password      ${EMPTY}             ${EMPTY}

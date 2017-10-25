@@ -36,6 +36,7 @@ Sign In With Valid Credential
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
+    Wait Until Keyword Succeeds    5s    1s    Location Should Be    ${URL}/#/user/dashboard
 
 Go To Create Item Page
     Wait Until Page Contains Element    create-customer

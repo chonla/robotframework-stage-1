@@ -2,10 +2,9 @@
 Library    SeleniumLibrary
 Suite Setup    Go To Login Page
 Suite Teardown    Close All Browsers
-Test Teardown    Reset Test
 
 *** Variables ***
-${URL}    http://localhost:4200     # https://robot-stage-1.firebaseapp.com
+${URL}    https://robot-stage-1.firebaseapp.com
 ${BROWSER}    gc
 ${VALID_USERNAME}    demouser
 ${VALID_PASSWORD}    demopassword
@@ -25,6 +24,7 @@ Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
     Login With Credential    ${username}    ${password}
     Invalid Username Or Password Error Modal Should Be Displayed
+    [Teardown]    Reset Test
 
 Sign Out
     Click Element    signout
@@ -32,9 +32,6 @@ Sign Out
 Go To Login Page
     Open Browser    ${URL}    ${BROWSER}
     Click Element    signin
-
-Go To Create User Page
-    Retry    Click Element    create-user
 
 Login With Credential
     [Arguments]    ${username}    ${password}
@@ -51,7 +48,7 @@ Enter Password
     Input Password    inputPassword    ${password}
 
 Click Login Button
-    Click Element    buttonLogin
+    Click Button    buttonLogin
 
 Invalid Username Or Password Error Modal Should Be Displayed
     Retry    Element Should Be Visible    errorModal
@@ -64,12 +61,12 @@ Retry
 Reset Test
     Retry    Click Button    close-error-modal-button
     Wait Until Element Is Not Visible    close-error-modal-button
-    Input Text    inputUser    ${EMPTY}
-    Retry    Wait Until Element Value Is Empty    inputUser
-    Input Password    inputPassword    ${EMPTY}
-    Retry    Wait Until Element Value Is Empty    inputPassword
+    Clear Text Field    inputUser
+    Clear Text Field    inputPassword
 
-Wait Until Element Value Is Empty
+Clear Text Field
     [Arguments]    ${locator}
     ${value}=    Get Value    ${locator}
-    Should Be Equal    ${value}    ${EMPTY}
+    ${length}=    Get Length    ${value}    
+    :FOR    ${index}    IN RANGE    ${length}
+    \    Press Key    ${locator}    \\8

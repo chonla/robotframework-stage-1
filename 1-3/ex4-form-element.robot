@@ -14,6 +14,7 @@ Should Go To Create Iteam Page From Side Navigation
     Location Should Be    ${URL}/#/user/create-customer
 
 When Create Item Success Success Modal Should Be Display
+    Wait Until Element Is Visible    inputName
     Input Text    inputName    สมเด่น เกือบดัง
     Input Text    inputEmail    somdenkuabdung@somemail.com
     Select From List By Value    inputGender    male
@@ -21,12 +22,11 @@ When Create Item Success Success Modal Should Be Display
     Input Text    inputDetail    สมเด่นเป็นคนขยัน ชอบกินกาแฟ
     Select Checkbox    inputVIP
     Click Element    buttonConfirm
-    Element Should Be Visible    modal
-    Element Should Contain    modal    บันทึกสำเร็จ
+    Wait Until Element Is Visible    success-modal
+    Element Should Contain    success-modal    บันทึกสำเร็จ
 
 *** Keywords ***
 Initialize Test
-    Set Selenium Speed    800ms
     Open Browser    ${URL}    ${BROWSER}
     Sign In With Valid Credential
     Go To Create Item Page
@@ -38,4 +38,5 @@ Sign In With Valid Credential
     Click Element    buttonLogin
 
 Go To Create Item Page
+    Wait Until Page Contains Element    create-customer
     Click Element    create-customer

@@ -19,9 +19,8 @@ After Login Should Redirect To Dashboard
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}
     Click Element    buttonLogin
-    Location Should Be    ${URL}/#/user/dashboard
+    Wait Until Keyword Succeeds    5s    1s    Location Should Be    ${URL}/#/user/dashboard
 
 *** Keywords ***
 Go To Test Site
     Open Browser    ${URL}    ${BROWSER}
-    Set Selenium Speed    800ms

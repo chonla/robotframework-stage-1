@@ -15,7 +15,7 @@ After Login Should Redirect To Dashboard
     Input Text    xpath=//*/input[@type="text"]    ${USERNAME}
     Input Password    xpath=//*/input[@type="password"]    ${PASSWORD}
     Click Element    xpath=//*/button[@type="submit"]
-    Location Should Be    ${URL}/#/user/dashboard
+    Wait Until Keyword Succeeds    5s    1s    Location Should Be    ${URL}/#/user/dashboard
 
 *** Keywords ***
 Go To Test Site

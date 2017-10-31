@@ -26,9 +26,6 @@ Login With Invalid Credentials Should Fail
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
-Sign Out
-    Click Element    signout
-
 Go To Login Page
     Open Browser    ${URL}    ${BROWSER}
     Click Element    signin

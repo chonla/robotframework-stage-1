@@ -25,9 +25,6 @@ Login With Invalid Credentials Should Fail
     Login With Credential    ${username}    ${password}
     Invalid Username Or Password Error Modal Should Be Displayed
 
-Sign Out
-    Click Element    signout
-
 Go To Login Page
     Open Browser    ${URL}    ${BROWSER}
     Click Element    signin

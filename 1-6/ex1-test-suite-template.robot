@@ -58,7 +58,8 @@ Retry
     Wait Until Keyword Succeeds    5s    3s    @{args}
 
 Reset Test
-    Retry    Click Button    close-error-modal-button
+    Wait Until Element Is Visible    close-error-modal-button
+    Click Button    close-error-modal-button
     Wait Until Element Is Not Visible    close-error-modal-button
     Clear Text Field    inputUser
     Clear Text Field    inputPassword

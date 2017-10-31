@@ -10,8 +10,8 @@
 
 ## ตัวอย่าง
 
-* Ex 1 - Inclusion
-* Ex 2 - Exclusion
+* Ex 1 - Tag inclusion/exclusion
+* Ex 2 - Multiple tags
 
 ## ลองทำ
 

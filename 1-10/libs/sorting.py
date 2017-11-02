@@ -9,5 +9,3 @@ def date_is_ascendingly_sorted(data):
       raise Exception('date should be sorted ascendingly, but they are not')
     else:
       d = di
-  else:
-    pass

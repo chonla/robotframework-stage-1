@@ -16,7 +16,7 @@
 
 ## ลองทำ
 
-* Task 1 - // TODO
+* Task 1 - Palindrome
 
 ---
 

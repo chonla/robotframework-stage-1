@@ -1,4 +1,4 @@
-# Robot Framework - Stage 1-4 : Better keywords
+# Robot Framework - Stage 1-11 : RESTful API Testing
 
 ## Library ที่ต้องใช้
 
@@ -6,7 +6,7 @@
 
 ## ความคาดหวัง
 
-เข้าใจการออกแบบ Keyword ที่ดี
+รู้วิธีการทดสอบ API ด้วย Robot
 
 ## ตัวอย่าง
 
@@ -22,5 +22,5 @@
 
 |   |   |   |
 | - | - | - |
-| [เรื่องก่อนหน้า](../1-3/README.md) | [INDEX](../README.md) | [เรื่องถัดไป](../1-5/README.md) |
+| [เรื่องก่อนหน้า](../1-10/README.md) | [INDEX](../README.md) | [เรื่องถัดไป](../1-12/README.md) |
 |   |   |   |

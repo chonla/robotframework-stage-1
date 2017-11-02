@@ -13,7 +13,7 @@
 
 * [Stage 1-3 : Web testing](1-3/README.md)
 
-## Practice
+## Practices
 
 * [Stage 1-4 : Better keywords](1-4/README.md)
 * [Stage 1-5 : Good test cases](1-5/README.md)

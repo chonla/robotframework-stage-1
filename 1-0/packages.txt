@@ -3,3 +3,4 @@ robotframework-seleniumlibrary
 requests
 requests_toolbelt
 selenium
+robotframework-pabot

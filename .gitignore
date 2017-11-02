@@ -2,8 +2,9 @@ log.html
 report.html
 output.xml
 .DS_Store
-selenium*.png
+*selenium*.png
 *.log
 task*-solution.robot
 create-item-*-screen.png
 __pycache__/
+pabot_results/

@@ -3,6 +3,8 @@
 ## Library ที่ต้องใช้
 
 * SeleniumLibrary
+* Requests Library
+* Requests Toolbelt
 
 ## ความคาดหวัง
 

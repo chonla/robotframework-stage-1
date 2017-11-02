@@ -10,9 +10,7 @@
 
 ## ตัวอย่าง
 
-* Ex 1 - Make a GET request
-* Ex 2 - Make a POST request
-* Ex 3 - Upload a file via API
+* Ex 1 - Date Sorting
 
 ## ลองทำ
 

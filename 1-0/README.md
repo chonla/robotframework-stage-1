@@ -98,6 +98,12 @@ Web Driver จะเป็นตัวกลางระหว่าง Selenium
 
 ที่สำคัญคือ เมื่อ Set PATH แล้ว ให้ Restart Browser ด้วย ถ้าเป็น OSX หรือ Ubuntu สามารถ ```source .profile``` ของ shell ได้เลย
 
+## ลองดูว่าติดตั้ง robot ได้ไหม
+
+รันคำสั่ง ```robot --version``` มันจะต้องบอกว่าใช้ robot เวอร์ชั่น 3.x.x กับ python เวอร์ชั่น 3.x.x
+
+ถ้าหากได้ python เวอร์ชั่นอื่น ให้ลองดูในไฟล์ robot (เปิดดูด้วย text editor) ว่าด้านในระบุ python เวอร์ชั่นอะไรอยู่ ก็แก้ให้ถูกต้อง
+
 ## ลอง
 
 ลองรันคำสั่ง ```robot welcome.robot``` ดู มันควรจะเปิด Browser และแสดงข้อความต้อนรับออกมา

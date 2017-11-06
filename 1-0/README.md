@@ -37,7 +37,7 @@ sudo apt-get install python3-pip
 เปิด Terminal แล้วรันคำสั่ง ```python3 -V``` มันควรจะตอบอะไรประมาณนี้กลับมา
 
 ```
-Python 3.6.2
+Python 3.6.3
 ```
 
 ## วิธีตรวจสอบว่าลง Pip แล้ว

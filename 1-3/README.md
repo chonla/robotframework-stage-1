@@ -1,4 +1,4 @@
-# Robot Framework - Stage 1-3 : Locators
+# Robot Framework - Stage 1-3 : Web testing
 
 ## Library ที่ต้องใช้
 

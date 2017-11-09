@@ -31,7 +31,6 @@ Invalid Credential Should Fail
 Open Headless Browser
     [Arguments]    ${url}
     ${options}=    Set Chrome Options
-    ${options.set_binary}=    Set Variable    set_binary=${CHROME_BINARY}
     Create WebDriver    Chrome    chrome_options=${options} 
     Go To    ${url}
 

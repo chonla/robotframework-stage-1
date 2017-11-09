@@ -10,7 +10,8 @@
 
 ## ตัวอย่าง
 
-* Ex 1 - Headless Browser
+* Ex 1 - Headless Browser (Chrome)
+* Ex 2 - Headless Browser (Firefox)
 
 ## ลองทำ
 

@@ -18,6 +18,12 @@ choco install python3
 [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python36\;C:\Python36\Scripts\", "User")
 ```
 
+### Windows (ผ่าน Installer)
+
+ระหว่างลง ตรงหน้าจอที่ให้ติ๊กว่าจะเลือกลงอะไรบ้าง ให้ติ๊กที่ Pip ด้วย
+
+![alt text](pip_windows_install_guide.png "อย่าลืมติ๊กที่ช่อง Pip")
+
 ### OSX (ผ่าน homebrew)
 
 ```

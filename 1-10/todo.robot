@@ -4,6 +4,7 @@ Library    ./libs/palindrome.py
 *** Test Cases ***
 Should Pass Palindrome Test
     [Template]    String Should Be Palindrome
+    [Tags]   task
     radar
     Radar
     racecar
@@ -13,6 +14,7 @@ Should Pass Palindrome Test
 
 Should Pass Not Palindrome Test
     [Template]    String Should Not Be Palindrome
+    [Tags]   task
     mouse
     a man
     Telephone

@@ -11,6 +11,7 @@ ${PASSWORD}    demopassword
 
 *** Test Cases ***
 After Success Login, Page Should Redirect To Dashboard
+    [Tags]   task
 
     #
     # Complete this task by make this test case more business readable.

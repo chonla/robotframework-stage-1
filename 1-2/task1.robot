@@ -3,6 +3,7 @@ Documentation    Complete Sorting Order Verifying Keyword
 
 *** Test Cases ***
 Verify If Input Is Sorted In Ascending Order
+    [Tags]   task
     @{input}    Create List    1    2    3    4
     Should Sorted In Ascending Order    ${input}
 

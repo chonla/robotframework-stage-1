@@ -15,6 +15,7 @@ ${DELAY}    1s
 
 *** Test Cases ***
 Show Welcome Message
+    [Tags]    greet
     : FOR    ${line}    IN    @{WELCOME_MESSAGE}
     \    Print ${line}
 

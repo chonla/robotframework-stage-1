@@ -5,12 +5,8 @@ branches:
   only:
     - master
 
-#before_script:
-script:
+before_script:
   - pip3 install --pre --upgrade -r 1-0/packages.txt
 
-# script:
-#    - ng build --prod --aot
-
-# after_success:
-#    - firebase deploy --token $FIREBASE_TOKEN --project $PROJECT_ID
+script:
+  - robot -e task .

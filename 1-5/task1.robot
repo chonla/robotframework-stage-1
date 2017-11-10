@@ -15,4 +15,5 @@ ${PASSWORD}    demopassword
     #
     # This test case should be idempotent.
     #
+    [Tags]   task
 

@@ -14,6 +14,7 @@ ${INTERVAL_TIMEOUT}    1s
 
 *** Test Cases ***
 Slow Loading Form Should Be Rendered
+    [Tags]   task
     Click Element    go_to_signin
     Input Text    inputUser    ${USERNAME}
     Input Password    inputPassword    ${PASSWORD}

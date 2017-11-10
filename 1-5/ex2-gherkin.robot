@@ -33,11 +33,11 @@ Sign In With Valid Credential
 Go To Create Customer Page
     Retry     Click Element    create-customer
 
-Form Should Be Displayed
-    Retry    Element Should Be Visible    inputName  
+Form Has Already Displayed
+    Wait Until Element Is Visible    inputName    10s 
 
 Fill Create Form
-    Form Should Be Displayed
+    Form Has Already Displayed
     Input Text    inputName    สมเด่น เกือบดัง
     Input Text    inputEmail    somdenkuabdung@somemail.com
     Select From List By Value    inputGender    male

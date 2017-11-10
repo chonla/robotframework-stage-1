@@ -39,7 +39,11 @@ Sign In With Valid Credential
 Go To Create Customer Page
     Retry    Click Element    create-customer
 
+Form Has Already Displayed
+    Wait Until Element Is Visible    inputName    10s    
+
 Fill Create Form
+    Form Has Already Displayed
     Input Text    inputName    สมเด่น เกือบดัง
     Input Text    inputEmail    somdenkuabdung@somemail.com
     Select From List By Value    inputGender    male
@@ -51,8 +55,8 @@ Click Save Button
     Click Element    buttonConfirm
 
 Customer Should Be Successfully Saved
-    Element Should Be Visible    modal
-    Element Should Contain    modal    บันทึกสำเร็จ
+    Retry    Element Should Be Visible    success-modal
+    Element Should Contain    success-modal    บันทึกสำเร็จ
 
 Selection Count Should Match
     [Arguments]    ${locator}    ${count}

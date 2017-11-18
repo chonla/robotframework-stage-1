@@ -19,4 +19,4 @@ before_script:
   - sudo apt-get install google-chrome-stable
 
 script:
-  - robot -e task .
+  - robot -e task -e greet .

@@ -19,4 +19,4 @@ before_script:
   - sudo apt-get install google-chrome-stable
 
 script:
-  - robot -i headless .
+  - robot -i headless -e firefox .

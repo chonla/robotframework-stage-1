@@ -12,31 +12,37 @@ ${CHROME_BINARY}    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chro
 
 *** Test Cases ***
 Invalid Username Should Fail
+    [Tags]    headless
     Login With Credential    invalid    ${VALID_PASSWORD}
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
 Invalid Password Should Fail
+    [Tags]    headless
     Login With Credential    ${VALID_USERNAME}    invalid
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
 Invalid Username And Password Should Fail
+    [Tags]    headless
     Login With Credential    invalid    invalid
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
 Empty Username Should Fail
+    [Tags]    headless
     Login With Credential    ${EMPTY}    ${VALID_PASSWORD}
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
 Empty Password Should Fail
+    [Tags]    headless
     Login With Credential    ${VALID_USERNAME}    ${EMPTY}
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test
 
 Empty Username And Password Should Fail
+    [Tags]    headless
     Login With Credential    ${EMPTY}    ${EMPTY}
     Invalid Username Or Password Error Modal Should Be Displayed
     [Teardown]    Reset Test

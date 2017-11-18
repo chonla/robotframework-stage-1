@@ -12,6 +12,7 @@ ${CHROME_BINARY}    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chro
 
 *** Test Cases ***
 Valid Credential Should Be Success
+    [Tags]    headless
     Login With Credential    ${VALID_USERNAME}    ${VALID_PASSWORD}
     Dashboard Should Be Displayed
     [Teardown]    Sign Out

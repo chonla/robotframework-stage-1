@@ -11,14 +11,14 @@ ${VALID_PASSWORD}    demopassword
 
 *** Test Cases ***
 Valid Credential Should Be Success
-    [Tags]    valid_credential
+    [Tags]    valid_credential    headless
     Login With Credential    ${VALID_USERNAME}    ${VALID_PASSWORD}
     Dashboard Should Be Displayed
     [Teardown]    Sign Out
 
 Invalid Credential Should Fail
     [Template]    Login With Invalid Credentials Should Fail
-    [Tags]    invalid_credential
+    [Tags]    invalid_credential    headless
     invalid              ${VALID_PASSWORD}
     ${VALID_USERNAME}    invalid
     invalid              invalid

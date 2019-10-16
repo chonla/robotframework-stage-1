@@ -34,3 +34,32 @@
 ## Test site
 
 * https://robot-stage-1.firebaseapp.com
+
+
+## Example
+-------
+
+Below is a simple example test case for testing login to some system.
+You can find more examples with links to related demo projects from
+http://robotframework.org.
+
+
+## Example Library DatabaseLibrary (MySQL)
+-------
+.. code:: robotframework
+
+    *** Settings ***
+    Library           DatabaseLibrary
+
+    *** Variables ***
+    ${DB_HOST}        127.0.0.1
+    ${DB_PORT}        3306
+    ${DB_NAME}        DBTEST
+    ${DB_USER}        robot
+    ${DB_PWD}         robotframework
+
+    *** Keywords ***
+    Verify transaction admin session timeout 30 min
+        Connect to Database     pymssql    ${DB_NAME}    ${DB_USER}    ${DB_PWD}    ${DB_HOST}    ${DB_PORT}
+        Execute Sql String      insert into ADMIN_TOKEN_SECRET (Login_Name, Secret, Create_Dtm) values ('robot', 'ROBOT_UUID', DATEADD(mi,-125,GETDATE()))
+        Disconnect from Database

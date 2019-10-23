@@ -80,4 +80,4 @@ Clear Text Field
     ${value}=    Get Value    ${locator}
     ${length}=    Get Length    ${value}    
     :FOR    ${index}    IN RANGE    ${length}
-    \    Press Key    ${locator}    \\8
+    \    Press Keys    ${locator}    \\8
